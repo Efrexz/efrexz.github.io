@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+  <section
+    class="w-full h-full lg:w-[740px] mx-auto py-24 text-white text-center"
+  >
+    <h1 class="text-5xl font-bold">
+      Hola, soy Efrain Andrade
+      <Badge>Frontend Developer</Badge>
+    </h1>
+
+    <p class="mt-4 text-lg leading-relaxed">
+      Soy un Desarrollador <strong class="text-yellow-200">Frontend</strong>.
+      Trabajo con <strong class="text-yellow-200"
+        >React, Tailwind, Astro y TypeScript</strong
+      > para diseñar interfaces atractivas y funcionales. Siempre busco mejorar mis
+      habilidades y asumir nuevos desafíos 🚀
+    </p>
+
+    <div class="mt-6 flex justify-center gap-4">
+      <SocialPill>
+        <MailIcon />
+        Contáctame
+      </SocialPill>
+      <SocialPill>
+        <LinkedinIcon />
+        LinkedIn
+      </SocialPill>
+    </div>
+  </section>
 </Layout>
