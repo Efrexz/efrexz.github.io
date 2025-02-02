@@ -1,11 +1,18 @@
+---
+import Badge from "../components/Badge.astro";
+---
+
 <header
   class="flex items-center justify-between w-[1120px] z-50 text-white py-3 px-4 mx-auto"
 >
-  <img
-    src="https://www.tibiawiki.com.br/images/7/76/Tibia_icon.png"
-    alt="efrexz photo"
-    class="w-12 h-12 rounded-full"
-  />
+  <div class="flex items-center gap-4">
+    <img
+      src="https://www.tibiawiki.com.br/images/7/76/Tibia_icon.png"
+      alt="efrexz photo"
+      class="w-12 h-12 rounded-full"
+    />
+    <Badge> Disponible para trabajar </Badge>
+  </div>
 
   <nav class="flex gap-10 opacity-80">
     <a class="hover:text-blue-500 font-semibold" href="#">Experiencia</a>
