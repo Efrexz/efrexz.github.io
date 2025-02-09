@@ -1,0 +1,114 @@
+---
+import CodeIcon from "../components/icons/Code.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import LinkIcon from "../components/icons/Link.astro";
+import TailwindIcon from "../components/icons/Tailwind.astro";
+import ReactIcon from "../components/icons/React.astro";
+import JavaScriptIcon from "../components/icons/JavaScript.astro";
+import AstroIcon from "../components/icons/Astro.astro";
+import CssIcon from "../components/icons/Css.astro";
+
+const projects = [
+  {
+    title: "To-Do List - Organiza tus tareas de manera eficiente",
+    description:
+      "Aplicación para gestionar tareas diarias con una interfaz intuitiva. Permite agregar, editar y eliminar tareas, además de marcarlas como completadas. Desarrollado con React y Tailwind CSS.",
+    technologies: ["React", "TailwindCSS", "JavaScript"],
+    githubUrl: "https://github.com/Efrexz/TodoListApp",
+    previewUrl: "https://efrexz.github.io/TodoListApp/",
+  },
+  {
+    title: "E-Commerce - Tienda en línea moderna y funcional",
+    description:
+      "Plataforma de comercio electrónico con carrito de compras, gestión de productos y proceso de pago. Diseñado para brindar una experiencia de compra fluida con React y Tailwind CSS.",
+    technologies: ["React", "TailwindCSS", "JavaScript"],
+    githubUrl: "https://github.com/Efrexz/EfrexzCommerce-",
+    previewUrl: "https://efrexz.github.io/EfrexzCommerce-/",
+  },
+  {
+    title: "VetManage - Sistema de gestión para veterinarias",
+    description:
+      "Plataforma integral para clínicas veterinarias. Administra historiales clínicos, listas de grooming, ventas de productos y servicios, y el control de mascotas de manera eficiente. Creado con React y Tailwind CSS.",
+    technologies: ["React", "TailwindCSS", "JavaScript"],
+    githubUrl: "https://github.com/Efrexz/vetAriels",
+    previewUrl: "https://efrexz.github.io/login",
+  },
+];
+
+const technologiesIcons = {
+  TailwindCSS: TailwindIcon,
+  React: ReactIcon,
+  JavaScript: JavaScriptIcon,
+  Astro: AstroIcon,
+  CSS: CssIcon,
+};
+
+const bgColors = {
+  TailwindCSS: "bg-[#003159]",
+  JavaScript: "bg-[#323330]",
+  React: "bg-[#0A1A2F]",
+  HTML: "bg-[#E34F26]",
+  CSS: "bg-[#1572B6]",
+  Astro: "bg-[#1E1E1E]",
+};
+---
+
+<article class="flex flex-start flex-col mt-20 max-w-[740px] mx-auto">
+  <h2 class="text-3xl font-bold flex justify-start items-center gap-4 mb-8">
+    <CodeIcon />
+    Proyectos
+  </h2>
+  <div class="flex flex-col gap-8">
+    <!-- Proyecto 1 -->
+    {
+      projects.map((project) => (
+        <div class="rounded-2xl shadow-lg flex">
+          <img
+            src="https://www.wimi-teamwork.com/static/medias/yyyy.png"
+            alt="project Image"
+            class="w-[350px] h-[250px] object-cover rounded-2xl"
+          />
+          <div class="pl-6 w-full">
+            <h3 class="text-xl font-semibold mb-2 text-left">
+              {project.title}
+            </h3>
+            <div class="flex gap-2 mb-4 flex-wrap">
+              {project.technologies.map((technology) => {
+                const IconComponent = technologiesIcons[technology];
+                return (
+                  <span
+                    class={`text-xs px-2 py-1 rounded-xl flex items-center justify-center gap-1 text-white ${bgColors[technology]}`}
+                  >
+                    {IconComponent && <IconComponent />} {technology}
+                  </span>
+                );
+              })}
+            </div>
+            <p class="text-neutral-400 text-sm mb-4 text-left">
+              {project.description}
+            </p>
+
+            <div class="flex gap-4">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                class="bg-neutral-700/60 border border-gray-500 hover:bg-neutral-600 text-white text-sm font-medium px-4 py-2 rounded-lg flex gap-2 justify-center items-center"
+              >
+                <GithubIcon />
+                Code
+              </a>
+              <a
+                href={project.previewUrl}
+                target="_blank"
+                class="bg-neutral-700/60 border border-gray-500 hover:bg-neutral-600 text-white text-sm font-medium px-4 py-2 rounded-lg flex gap-2 justify-center items-center"
+              >
+                <LinkIcon />
+                Preview
+              </a>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</article>
