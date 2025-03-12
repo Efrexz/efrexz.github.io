@@ -5,16 +5,23 @@ import HeroSection from "../components/HeroSection.astro";
 import ExperienceSection from "../components/ExperienceSection.astro";
 import ProjectsSection from "../components/Projects.astro";
 import AboutSection from "../components/AboutSection.astro";
+import FooterSection from "../components/FooterSection.astro";
 ---
 
-<Layout>
-  <Header />
-  <section
-    class="w-full h-full lg:w-[740px] mx-auto py-24 text-white text-center"
-  >
-    <HeroSection />
-    <ExperienceSection />
-    <ProjectsSection />
-    <AboutSection />
-  </section>
+<Layout title="Porfolio de Efrain Andrade - Desarrollador Frontend">
+  <main>
+    <Header />
+    <section
+      class="min-h-screen flex flex-col w-full lg:w-[740px] mx-auto pt-24 pb-2 text-white text-center"
+    >
+      <header>
+        <HeroSection />
+      </header>
+      <article>
+        <ExperienceSection />
+        <ProjectsSection />
+        <AboutSection />
+      </article>
+    </section>
+  </main>
 </Layout>
