@@ -7,16 +7,26 @@ import ReactIcon from "../components/icons/React.astro";
 import JavaScriptIcon from "../components/icons/JavaScript.astro";
 import AstroIcon from "../components/icons/Astro.astro";
 import CssIcon from "../components/icons/Css.astro";
+import TypeScriptIcon from "../components/icons/TypeScript.astro"
 
 const projects = [
   {
-    title: "To-Do List - Organiza tus tareas de manera eficiente",
+    title: "VetManage - Sistema de gestión para veterinarias",
     description:
-      "Aplicación para gestionar tareas diarias con una interfaz intuitiva. Permite agregar, editar y eliminar tareas, además de marcarlas como completadas. Desarrollado con React y Tailwind CSS.",
-    technologies: ["React", "TailwindCSS", "JavaScript"],
-    githubUrl: "https://github.com/Efrexz/TodoListApp",
-    previewUrl: "https://efrexz.github.io/TodoListApp/",
-    imageUrl: "/images/tasks.webp",
+      "Plataforma integral para clínicas veterinarias. Administra historiales clínicos, listas de grooming, ventas de productos y servicios, y el control de mascotas de manera eficiente. Creado con React y Tailwind CSS.",
+    technologies: ["React", "TailwindCSS", "TypeScript"],
+    githubUrl: "https://github.com/Efrexz/vetAriels",
+    previewUrl: "https://vet-arielsclinic.vercel.app/",
+    imageUrl: "/images/vet.webp",
+  },
+  {
+    title: "Landing Page - Página Web para Veterinaria",
+    description:
+      "Landing page profesional diseñada para una clínica veterinaria con el objetivo de aumentar su presencia en línea y atraer nuevos clientes. Creada con Astro y un diseño totalmente responsivo con Tailwind CSS.",
+    technologies: ["Astro", "TailwindCSS", "JavaScript"],
+    githubUrl: "https://github.com/Efrexz/vetariels-landing",
+    previewUrl: "https://vetariels-landing.vercel.app/",
+    imageUrl: "/images/landingPage.webp",
   },
   {
     title: "E-Commerce - Tienda en línea moderna y funcional",
@@ -27,15 +37,6 @@ const projects = [
     previewUrl: "https://efrexz.github.io/EfrexzCommerce-/",
     imageUrl: "/images/eCommerce.webp",
   },
-  {
-    title: "VetManage - Sistema de gestión para veterinarias",
-    description:
-      "Plataforma integral para clínicas veterinarias. Administra historiales clínicos, listas de grooming, ventas de productos y servicios, y el control de mascotas de manera eficiente. Creado con React y Tailwind CSS.",
-    technologies: ["React", "TailwindCSS", "JavaScript"],
-    githubUrl: "https://github.com/Efrexz/vetAriels",
-    previewUrl: "https://vet-ariel.vercel.app/",
-    imageUrl: "/images/vet.webp",
-  },
 ];
 
 const technologiesIcons = {
@@ -44,6 +45,7 @@ const technologiesIcons = {
   JavaScript: JavaScriptIcon,
   Astro: AstroIcon,
   CSS: CssIcon,
+  TypeScript: TypeScriptIcon
 };
 
 const bgColors = {
@@ -53,6 +55,7 @@ const bgColors = {
   HTML: "bg-[#E34F26]",
   CSS: "bg-[#1572B6]",
   Astro: "bg-[#1E1E1E]",
+  TypeScript: "bg-[#235A97]",  
 };
 ---
 
